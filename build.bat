@@ -1,6 +1,6 @@
 @echo OFF
 
-set VERSION=1.0
+set VERSION=1.1
 
 :: "build" folder to contain compiled files
 if not exist .\build (
