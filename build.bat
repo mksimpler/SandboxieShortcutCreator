@@ -18,6 +18,7 @@ if [%1] == [] (
 :: Compile installer
 ahk2exe /in .\src\RegInstaller.ahk /out .\build\RegInstaller.exe
 ahk2exe /in .\src\RegUninstaller.ahk /out .\build\RegUninstaller.exe
+echo .\RegInstaller.exe --debug > .\build\RegInstallerDebug.bat
 
 :: "dist" folder to contain distributing files
 if not exist .\dist (
