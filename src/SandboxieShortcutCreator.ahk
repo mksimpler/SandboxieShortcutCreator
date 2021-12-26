@@ -205,9 +205,12 @@ BtnOKClicked:
     LogFile("verbose", Format("Target is shortcut. Shortcut: {}", executePath))
     shortcutPath = %workingDir%\%filename% @%boxName%.lnk
     
-    FileGetShortcut, %executePath%, execRealPath, execWorkingDir
+    FileGetShortcut, %executePath%, execRealPath, execWorkingDir, , , execIconPath
     executePath = %execRealPath%
-    iconPath = %execRealPath%
+    If execIconPath
+      iconPath = %execIconPath%
+    Else
+      iconPath = %execRealPath%
     workingDir = %execWorkingDir%
   }
   
